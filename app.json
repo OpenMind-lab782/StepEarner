@@ -1,4 +1,4 @@
-[200~{
+{
   "expo": {
     "name": "StepEarner",
     "slug": "stepearner",
@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#0A0E1A"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -36,8 +38,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "YOUR_EAS_PROJECT_ID"
+        "projectId": "e9464f36-fe85-4bc2-bed0-73fae82ed7f1"
       }
-    }
+    },
+    "owner": "divinelyapproved"
   }
-}~
+}
