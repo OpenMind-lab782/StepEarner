@@ -42,8 +42,3 @@ const s=StyleSheet.create({
   row:{flexDirection:'row',gap:8},
   btn:{flex:1,backgroundColor:Colors.bgCard,borderRadius:16,padding:16,alignItems:'center',borderWidth:1,borderColor:Colors.border},
   bi:{fontSize:22},bl:{fontSize:11,color:Colors.textSecondary},
-});
-row:{flexDirection:'row',gap:8},
-  btn:{flex:1,backgroundColor:Colors.bgCard,borderRadius:16,padding:16,alignItems:'center',borderWidth:1,borderColor:Colors.border},
-  bi:{fontSize:22},bl:{fontSize:11,color:Colors.textSecondary},
-});
