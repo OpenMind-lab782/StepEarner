@@ -33,6 +33,3 @@ const s=StyleSheet.create({
   btn:{backgroundColor:Colors.neonGreen,borderRadius:12,padding:16,alignItems:'center'},
   bt:{color:Colors.bg,fontWeight:'700',fontSize:16},
 });
-btn:{backgroundColor:Colors.neonGreen,borderRadius:12,padding:16,alignItems:'center'},
-  bt:{color:Colors.bg,fontWeight:'700',fontSize:16},
-});

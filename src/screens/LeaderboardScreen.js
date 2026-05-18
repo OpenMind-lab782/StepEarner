@@ -37,5 +37,3 @@ const s=StyleSheet.create({
   info:{flex:1},name:{fontSize:14,fontWeight:'600',color:'#fff'},steps:{fontSize:12,color:Colors.textMuted,marginTop:2},
   tok:{fontSize:14,fontWeight:'700',color:Colors.gold},
 });
-tok:{fontSize:14,fontWeight:'700',color:Colors.gold},
-});
