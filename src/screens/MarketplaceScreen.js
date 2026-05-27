@@ -36,7 +36,3 @@ const s=StyleSheet.create({
   info:{flex:1},name:{fontSize:15,color:'#fff',fontWeight:'600'},cost:{fontSize:13,color:Colors.neonGreen,marginTop:2},
   arrow:{fontSize:24,color:Colors.textMuted},
 });
-off:{opacity:0.4},icon:{fontSize:32},
-  info:{flex:1},name:{fontSize:15,color:'#fff',fontWeight:'600'},cost:{fontSize:13,color:Colors.neonGreen,marginTop:2},
-  arrow:{fontSize:24,color:Colors.textMuted},
-});

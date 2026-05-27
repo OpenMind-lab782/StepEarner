@@ -41,7 +41,3 @@ const s=StyleSheet.create({
   row:{flexDirection:'row',alignItems:'center',justifyContent:'space-between',padding:16,borderBottomWidth:1,borderBottomColor:Colors.border},
   rl:{fontSize:15,color:'#fff'},rl2:{fontSize:14,color:Colors.neonGreen,fontWeight:'600'},
 });
-sec:{backgroundColor:Colors.bgCard,borderRadius:16,borderWidth:1,borderColor:Colors.border,overflow:'hidden'},
-  row:{flexDirection:'row',alignItems:'center',justifyContent:'space-between',padding:16,borderBottomWidth:1,borderBottomColor:Colors.border},
-  rl:{fontSize:15,color:'#fff'},rl2:{fontSize:14,color:Colors.neonGreen,fontWeight:'600'},
-});
