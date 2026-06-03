@@ -68,7 +68,7 @@ const s = StyleSheet.create({
   lbl:{fontSize:11,color:Colors.textSecondary,letterSpacing:3},
   sub:{fontSize:13,color:Colors.textMuted,marginBottom:8},
   stat:{fontSize:11,color:Colors.neonGreen,marginTop:4},
-  pb:width:"100%",height:8,backgroundColor:Colors.bgElevated,borderRadius:999},
+  pb:{width:"100%",height:8,backgroundColor:Colors.bgElevated,borderRadius:999},
   pf:{height:8,backgroundColor:Colors.neonGreen,borderRadius:999},
   row:{flexDirection:"row",gap:8},
   btn:{flex:1,backgroundColor:Colors.bgCard,borderRadius:16,padding:16,alignItems:"center",borderWidth:1,borderColor:Colors.border},
