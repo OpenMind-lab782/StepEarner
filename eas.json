@@ -8,6 +8,12 @@
         "image": "latest",
         "gradleCommand": ":app:bundleRelease --info"
       }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
     }
   }
 }
