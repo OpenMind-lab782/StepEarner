@@ -1,9 +1,11 @@
-import React from 'react';
+import React,{useCallback} from 'react';
 import {View,Text,StyleSheet,TouchableOpacity,Alert,Platform} from 'react-native';
+import {useFocusEffect} from '@react-navigation/native';
 import {Colors,TOKEN_SYMBOL} from '../theme';
 import {useApp} from '../context/AppContext';
 export default function WalletScreen(){
-  const {wallet}=useApp();
+  const {wallet,refreshWallet}=useApp();
+  useFocusEffect(useCallback(()=>{refreshWallet();},[refreshWallet]));
   return(
     <View style={s.c}>
       <Text style={s.title}>My Wallet 💎</Text>

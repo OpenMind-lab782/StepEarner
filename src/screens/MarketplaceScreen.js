@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useCallback} from 'react';
 import {View,Text,StyleSheet,ScrollView,TouchableOpacity,Alert,Platform} from 'react-native';
+import {useFocusEffect} from '@react-navigation/native';
 import {Colors,TOKEN_SYMBOL} from '../theme';
 import {useApp} from '../context/AppContext';
 import {spendTokens} from '../utils/storage';
 const R=[{id:'1',t:'$5 Amazon',i:'🛍️',c:500},{id:'2',t:'$5 Starbucks',i:'☕',c:500},{id:'3',t:'$5 Bitcoin',i:'₿',c:500},{id:'4',t:'Plant 5 Trees',i:'🌳',c:100},{id:'5',t:'Feed a Family',i:'🍽️',c:200}];
 export default function MarketplaceScreen(){
   const {wallet,refreshWallet}=useApp();
+  useFocusEffect(useCallback(()=>{refreshWallet();},[refreshWallet]));
   const buy=async(r)=>{
     if(wallet.balance<r.c){Alert.alert('Need more FIT!',`Walk more steps to earn ${r.c} FIT.`);return;}
     Alert.alert('Confirm',`Buy ${r.t} for ${r.c} FIT?`,[{text:'Cancel',style:'cancel'},{text:'Buy',onPress:async()=>{await spendTokens(r.c,r.t);await refreshWallet();Alert.alert('Success!','Check email in 24-48hrs.');}}]);

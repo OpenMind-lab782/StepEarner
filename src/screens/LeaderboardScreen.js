@@ -6,7 +6,7 @@ const D=[{n:'StepKing_Alex',a:'👑',s:98241,t:982},{n:'RunQueen_Zara',a:'🏃�
 const M=['🥇','🥈','🥉'];
 export default function LeaderboardScreen(){
   const {todaySteps,wallet,profile}=useApp();
-  const me={n:profile?.name||'You',a:profile?.avatar||'🏃',s:todaySteps*5,t:Math.round(wallet.totalEarned||0),isMe:true};
+  const me={n:profile?.name||'FitWalker',a:profile?.avatar||'🏃',s:todaySteps,t:Math.round(wallet.balance||0),isMe:true};
   const list=[...D,me].sort((a,b)=>b.s-a.s).map((p,i)=>({...p,r:i+1}));
   return(
     <View style={s.c}>
