@@ -97,7 +97,7 @@ const s=StyleSheet.create({
   pb:{width:'100%',height:8,backgroundColor:Colors.bgElevated,borderRadius:999},
   pf:{height:8,backgroundColor:Colors.neonGreen,borderRadius:999},
   stat:{fontSize:11,color:Colors.neonGreen,marginTop:4},
-  fitEarned:{fontSize:13,color:Colors.neonGreen,textAlign:'center',fontWeight: 600',marginTop:8},
+  fitEarned:{fontSize:13,color:Colors.neonGreen,textAlign:'center',fontWeight:'600',marginTop:8},
   row:{flexDirection:'row',gap:8},
   btn:{flex:1,backgroundColor:Colors.bgCard,borderRadius:16,padding:16,alignItems:'center',borderWidth:1,borderColor:Colors.border},
   bi:{fontSize:14,color:Colors.textSecondary},
