@@ -20,7 +20,7 @@ export default function HomeScreen({navigation}){
       start.setHours(0,0,0,0);
       try{
         const r=await Pedometer.getStepCountAsync(start,now);
-        if(r){setSteps(r.steps);await updateFit(r.steps);}
+        if(r&&r.steps>0){setSteps(s=>Math.max(s,r.steps));await updateFit(r.steps);}
       }catch(e){console.log('step err',e);}
     };
     const updateFit=async(todaySteps)=>{
@@ -46,7 +46,7 @@ export default function HomeScreen({navigation}){
       setStatus('active');
       try{
         const st=await AsyncStorage.getItem('fit_data');
-        if(st){const d=JSON.parse(st);setFitBalance(d.balance||0);}
+        if(st){const d=JSON.parse(st);setFitBalance(d.balance||0);const tod=new Date().toDateString();if(d.lastDate===tod){setSteps(d.lastSteps||0);}}
       }catch(e){}
       await getStepsToday();
       sub=Pedometer.watchStepCount(()=>{getStepsToday();});
