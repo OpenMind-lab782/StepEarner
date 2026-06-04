@@ -13,7 +13,7 @@ export default function HomeScreen({navigation}){
   const [fitToday,setFitToday]=useState(0);
 
   useEffect(()=>{
-    let sub;
+    let sub;let watchBase=0;let watchDelta=0;
     const getStepsToday=async()=>{
       const now=new Date();
       const start=new Date(now);
@@ -46,10 +46,10 @@ export default function HomeScreen({navigation}){
       setStatus('active');
       try{
         const st=await AsyncStorage.getItem('fit_data');
-        if(st){const d=JSON.parse(st);setFitBalance(d.balance||0);const tod=new Date().toDateString();if(d.lastDate===tod){setSteps(d.lastSteps||0);}}
+        if(st){const d=JSON.parse(st);setFitBalance(d.balance||0);const tod=new Date().toDateString();if(d.lastDate===tod){watchBase=d.lastSteps||0;setSteps(d.lastSteps||0);}}
       }catch(e){}
       await getStepsToday();
-      sub=Pedometer.watchStepCount(()=>{getStepsToday();});
+      sub=Pedometer.watchStepCount((res)=>{watchDelta+=(res&&res.steps>0?res.steps:1);const wt=watchBase+watchDelta;setSteps(s=>Math.max(s,wt));updateFit(wt);getStepsToday();});
     };
     init();
     return()=>{if(sub)sub.remove();};
